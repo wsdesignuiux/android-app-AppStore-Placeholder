@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="design.ws.com.appstore.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottombar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/serach_rect">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_search"/>
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search for apps"
+                    android:background="@color/transperent"
+                    android:padding="10dp"
+                    android:textColorHint="#363636"
+                    android:inputType="text"
+                    android:textSize="11dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line"/>
+
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <!--roughike bottombar library used-->
+
+    <LinearLayout
+        android:layout_above="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow"/>
+
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_color"
+        android:gravity="bottom"
+        app:bb_activeTabColor="#ffffff"
+        app:bb_badgesHideWhenActive="false"
+        app:bb_inActiveTabColor="#a4ebfe"
+        app:bb_showShadow="false"
+        app:bb_tabXmlResource="@xml/tab"
+        app:paddingStart="10dp"
+        app:bb_titleTextAppearance="@style/botoombar_textchange"
+        app:bb_titleTypeFace="fonts/Roboto-Regular.ttf" />
+
+
+
+</RelativeLayout>
